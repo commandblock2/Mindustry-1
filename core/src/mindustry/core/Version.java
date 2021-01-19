@@ -17,7 +17,7 @@ public class Version{
     /** Build number, e.g. '43'. set to '-1' for custom builds. */
     public static int build = 122;
     /** Revision number. Used for hotfixes. Does not affect server compatibility. */
-    public static int revision = 2333333333333;
+    public static int revision = 2333333;
     /** Whether version loading is enabled. */
     public static boolean enabled = false;
 

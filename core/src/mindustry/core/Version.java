@@ -9,22 +9,22 @@ import arc.util.io.*;
 
 public class Version{
     /** Build type. 'official' for official releases; 'custom' or 'bleeding edge' are also used. */
-    public static String type = "unknown";
+    public static String type = "official";
     /** Build modifier, e.g. 'alpha' or 'release' */
-    public static String modifier = "unknown";
+    public static String modifier = "release";
     /** Number specifying the major version, e.g. '4' */
-    public static int number;
+    public static int number = 6;
     /** Build number, e.g. '43'. set to '-1' for custom builds. */
-    public static int build = 0;
+    public static int build = 122;
     /** Revision number. Used for hotfixes. Does not affect server compatibility. */
-    public static int revision = 0;
+    public static int revision = 2333333333333;
     /** Whether version loading is enabled. */
-    public static boolean enabled = true;
+    public static boolean enabled = false;
 
     public static void init(){
         if(!enabled) return;
 
-        Fi file = OS.isAndroid || OS.isIos ? Core.files.internal("version.properties") : new Fi("version.properties", FileType.internal);
+       /* Fi file = OS.isAndroid || OS.isIos ? Core.files.internal("version.properties") : new Fi("version.properties", FileType.internal);
 
         ObjectMap<String, String> map = new ObjectMap<>();
         PropertiesUtils.load(map, file.reader());
@@ -43,7 +43,7 @@ public class Version{
             }
         }else{
             build = Strings.canParseInt(map.get("build")) ? Integer.parseInt(map.get("build")) : -1;
-        }
+        }*/
     }
 
     /** @return whether the version is greater than the specified version string, e.g. "120.1"*/

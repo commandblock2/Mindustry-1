@@ -37,7 +37,7 @@ public class Rules{
     /** Whether reactors can explode and damage other blocks. */
     public boolean reactorExplosions = true;
     /** Whether schematics are allowed. */
-    public boolean schematicsAllowed = true;
+    public final boolean schematicsAllowed = true;
     /** Whether friendly explosions can occur and set fire/damage other blocks. */
     public boolean damageExplosions = true;
     /** Whether fire is enabled. */
